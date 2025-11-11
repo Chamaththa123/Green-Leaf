@@ -136,7 +136,7 @@ export const Login = () => {
         </div>
 
         <button
-          className="w-full max-w-[389px] h-[56px] bg-[#00eb2b] flex justify-center p-3 text-white font-poppins text-[16px] md:text-[16px] font-bold rounded-[10px] mt-8 cursor-pointer border border-black"
+          className="w-full max-w-[389px] h-[56px] bg-[#54993a] flex justify-center p-3 text-white font-poppins text-[16px] md:text-[16px] font-bold rounded-[10px] mt-8 cursor-pointer border border-black"
           type="submit"
         >
           Sign In

@@ -20,7 +20,7 @@ export const GuestLayout = () => {
        <div className="flex-1 flex items-center justify-center border-b-2 md:border-b-0 md:border-r-2">
         <img className="w-1/2 md:w-full" src={logo} alt="Logo" />
       </div>
-      <div className="flex-1 flex items-center justify-center bg-[#03d63d]">
+      <div className="flex-1 flex items-center justify-center bg-[#54993a]">
         <Outlet />
       </div>
     </div>
