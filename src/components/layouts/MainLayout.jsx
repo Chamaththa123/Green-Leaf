@@ -83,7 +83,7 @@ export const MainLayout = ({ selectedItem }) => {
       subPaths = [];
       break;
     case "/factory":
-      mainPath = "Factory";
+      mainPath = "Factory Details";
       subPaths = [];
       break;
     case "/suppliers":

@@ -32,106 +32,96 @@ export const ViewLeaf = ({ isOpen, onClose, selectedLeafId }) => {
   }, [selectedLeafId]);
 
   const inputItems = [
-    {
-      name: "Date",
-      inputName: new Date(leaf.date).toLocaleString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-      }),
-    },
-    {
-      name: "Supplier",
-      inputName: leaf.supplier,
-    },
-    {
-      name: "No of Stock",
-      inputName: leaf.noofSacks,
-    },
+  {
+    name: "Entry Date & Time",
+    inputName: new Date(leaf.date).toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    }),
+  },
+  {
+    name: "Supplier Name",
+    inputName: leaf.supplier,
+  },
+  {
+    name: "Number of Sacks",
+    inputName: leaf.noofSacks,
+  },
+  {
+    name: "Total Weight (Kg)",
+    inputName: leaf.totalKg,
+  },
+  {
+    name: "Sacks Weight (Kg)",
+    inputName: leaf.sacksWeight,
+  },
+  {
+    name: "Small Leaf Weight (SW)",
+    inputName: leaf.sw,
+  },
+  {
+    name: "Small Leaf Deduction (SWDS)",
+    inputName: leaf.swds,
+  },
+  {
+    name: "Big Leaf Weight (BW)",
+    inputName: leaf.bw,
+  },
+  {
+    name: "Big Leaf Deduction (BWDS)",
+    inputName: leaf.bwds,
+  },
+  {
+    name: "Small Leaf Entry (SWENT)",
+    inputName: leaf.swent,
+  },
+  {
+    name: "Water Content",
+    inputName: leaf.water,
+  },
+  {
+    name: "Coarse Leaf Weight",
+    inputName: leaf.coastLeaf,
+  },
+  {
+    name: "Other Deductions",
+    inputName: leaf.other,
+  },
+  {
+    name: "Return Weight",
+    inputName: leaf.return,
+  },
+  {
+    name: "Net Quantity (Kg)",
+    inputName: leaf.netQty,
+  },
+  {
+    name: "GL To Date",
+    inputName: leaf.gltodate,
+  },
+  {
+    name: "Leaf Category",
+    inputName: leaf.leafCat,
+  },
+  {
+    name: "DWS GLTR Number",
+    inputName: leaf.dwsgltrNo,
+  },
+  {
+    name: "Entry Time",
+    inputName: new Date(leaf.entTime).toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    }),
+  },
+];
 
-    {
-      name: "Total",
-      inputName: leaf.totalKg,
-    },
-    {
-      name: "Sacks Weight",
-      inputName: leaf.sacksWeight,
-    },
-    {
-      name: "sw",
-      inputName: leaf.sw,
-    },
-    {
-      name: "swds",
-      inputName: leaf.swds,
-    },
-    {
-      name: "bw",
-      inputName: leaf.bw,
-    },
-    {
-      name: "bwds",
-      inputName: leaf.bwds,
-    },
-    {
-      name: "swent",
-      inputName: leaf.swent,
-    },
-    {
-      name: "Water",
-      inputName: leaf.water,
-    },
-    {
-      name: "coastLeaf",
-      inputName: leaf.coastLeaf,
-    },
-    {
-      name: "Other",
-      inputName: leaf.other,
-    },
-    {
-      name: "return",
-      inputName: leaf.return,
-    },
-    {
-      name: "Net Qty",
-      inputName: leaf.netQty,
-    },
-    {
-      name: "gltodate",
-      inputName: leaf.gltodate,
-    },
-    {
-      name: "leafCat",
-      inputName: leaf.leafCat,
-    },
-    {
-      name: "dwsgltrNo",
-      inputName: leaf.dwsgltrNo,
-    },
-    {
-      name: "entTime",
-      inputName: new Date(leaf.entTime).toLocaleString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-      }),
-    },
-    {
-      name: "entDate",
-      inputName: new Date(leaf.entDate).toLocaleString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-      }),
-    }
-  ];
 
   return (
     <Dialog

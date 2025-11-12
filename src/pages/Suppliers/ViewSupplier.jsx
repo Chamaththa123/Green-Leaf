@@ -106,7 +106,13 @@ const inputItems = [
   },
   {
     name: "Entry Date",
-    inputName: supplier.entDate,
+    inputName: new Date(supplier.entDate).toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    }),
   },
   {
     name: "Created By (Username)",

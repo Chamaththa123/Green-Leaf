@@ -97,7 +97,7 @@ export const Supplier = () => {
       selector: (row) => row.supName || "-",
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+      minWidth: "150px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -108,7 +108,7 @@ export const Supplier = () => {
       selector: (row) => row.comName || "-",
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+      minWidth: "150px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -119,7 +119,7 @@ export const Supplier = () => {
       selector: (row) => row.email || "-",
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+      minWidth: "150px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -130,7 +130,7 @@ export const Supplier = () => {
       selector: (row) => row.telephone || "-",
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+      minWidth: "150px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -141,7 +141,7 @@ export const Supplier = () => {
       selector: (row) => row.address1 || "-",
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+      minWidth: "150px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -152,7 +152,7 @@ export const Supplier = () => {
       selector: (row) => row.creditLimit || "-",
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+      minWidth: "100px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -163,7 +163,7 @@ export const Supplier = () => {
       selector: (row) => row.creditPeriod || "-",
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+      minWidth: "100px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -248,8 +248,8 @@ export const Supplier = () => {
             customStyles={tableHeaderStyles}
             className="mt-4"
             pagination
-            paginationPerPage={5}
-            paginationRowsPerPageOptions={[5, 10, 15]}
+            paginationPerPage={20}
+            paginationRowsPerPageOptions={[20, 40, 60]}
             paginationComponentOptions={{
               rowsPerPageText: "Entries per page:",
               rangeSeparatorText: "of",

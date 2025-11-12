@@ -88,7 +88,7 @@ export const GreenLeaf = () => {
       selector: (row) => `${row.trNo}`,
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+      minWidth: "50px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -118,10 +118,10 @@ export const GreenLeaf = () => {
 
     {
       name: "Supplier",
-      selector: (row) => row.supplier,
+      selector: (row) => row.supplier || "-",
       wrap: true,
       compact: true,
-      maxWidth: "auto",
+       minWidth: "180px",
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -129,9 +129,10 @@ export const GreenLeaf = () => {
     },
     {
       name: "No of Sacks",
-      selector: (row) => row.noofSacks,
+      selector: (row) => row.noofSacks || "-",
       wrap: true,
       compact: true,
+      right:true,
       maxWidth: "auto",
       cellStyle: {
         whiteSpace: "normal",
@@ -140,9 +141,10 @@ export const GreenLeaf = () => {
     },
     {
       name: "Total (Kg)",
-      selector: (row) => row.totalKg.toFixed(2),
+      selector: (row) => row.totalKg.toFixed(2) || "-",
       wrap: true,
       compact: true,
+      right:true,
       maxWidth: "auto",
       cellStyle: {
         whiteSpace: "normal",
@@ -152,10 +154,11 @@ export const GreenLeaf = () => {
 
     {
       name: "Sacks Weight (g)",
-      selector: (row) => row.sacksWeight.toFixed(2),
+      selector: (row) => row.sacksWeight.toFixed(2) || "-",
       wrap: true,
       compact: true,
       minWidth: "150px",
+      right:true,
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
@@ -163,7 +166,7 @@ export const GreenLeaf = () => {
     },
     {
       name: "Water Weight",
-      selector: (row) => row.water.toFixed(2),
+      selector: (row) => row.water.toFixed(2) || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -171,10 +174,11 @@ export const GreenLeaf = () => {
         whiteSpace: "normal",
         wordBreak: "break-word",
       },
+      right:true,
     },
     {
       name: "Net Weight (Kg)",
-      selector: (row) => row.netQty.toFixed(2),
+      selector: (row) => row.netQty.toFixed(2) || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -182,6 +186,7 @@ export const GreenLeaf = () => {
         whiteSpace: "normal",
         wordBreak: "break-word",
       },
+      right:true,
     },
     {
       name: "Status",
@@ -298,8 +303,8 @@ export const GreenLeaf = () => {
             customStyles={tableHeaderStyles}
             className="mt-4"
             pagination
-            paginationPerPage={5}
-            paginationRowsPerPageOptions={[5, 10, 15]}
+            paginationPerPage={20}
+             paginationRowsPerPageOptions={[20, 40, 60]}
             paginationComponentOptions={{
               rowsPerPageText: "Entries per page:",
               rangeSeparatorText: "of",
