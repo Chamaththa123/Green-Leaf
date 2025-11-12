@@ -148,7 +148,7 @@ const inputItems = [
             <span className="ml-2 text-gray-500">Loading...</span>
           </div>
         ) : (
-          <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-3 md:gap-2 md:mt-2">
+          <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-3 md:gap-2 md:mt-2 text-[#64728C] font-poppins">
             {inputItems.map((item, itemIndex) => (
               <div className="mb-3" key={itemIndex}>
                 <div className="font-semibold">{item.name}</div>
