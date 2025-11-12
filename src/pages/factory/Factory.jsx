@@ -210,7 +210,7 @@ export const Factory = () => {
                   </div>
                   <div className="flex justify-end gap-5 md:mt-0 mt-7">
                     <button
-                      className="bg-[#03d63d] font-poppins text-[14px] font-semibold leading-[22px] px-4 py-2 rounded-[20px] min-w-[80px] hover:bg-[#03d63d] hover:text-white text-white border border-[#03d63d] transition-all duration-300 flex items-center gap-2 justify-center"
+                      className="bg-[#54993a] font-poppins text-[14px] font-semibold leading-[22px] px-4 py-2 rounded-[20px] min-w-[80px] hover:bg-[#54993a] hover:text-white text-white border border-[#54993a] transition-all duration-300 flex items-center gap-2 justify-center"
                       type="submit"
                       disabled={submitting}
                     >

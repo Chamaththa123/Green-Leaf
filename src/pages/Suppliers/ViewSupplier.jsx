@@ -31,89 +31,89 @@ export const ViewSupplier = ({ isOpen, onClose, selectedSupplierId }) => {
     }
   }, [selectedSupplierId]);
 
-  const inputItems = [
-    {
-      name: "Code",
-      inputName: supplier.supCode,
-    },
-    {
-      name: "Name",
-      inputName: supplier.supName,
-    },
-    {
-      name: "Company",
-      inputName: supplier.comName,
-    },
+const inputItems = [
+  {
+    name: "Supplier Code",
+    inputName: supplier.supCode,
+  },
+  {
+    name: "Supplier Name",
+    inputName: supplier.supName,
+  },
+  {
+    name: "Company Name",
+    inputName: supplier.comName,
+  },
+  {
+    name: "Address",
+    inputName: supplier.address1,
+  },
+  {
+    name: "Contact Number",
+    inputName: supplier.telephone,
+  },
+  {
+    name: "Contact Person",
+    inputName: supplier.contactPerson,
+  },
+  {
+    name: "Email Address",
+    inputName: supplier.email,
+  },
+  {
+    name: "Fax Number",
+    inputName: supplier.fax,
+  },
+  {
+    name: "Credit Limit",
+    inputName: supplier.creditLimit,
+  },
+  {
+    name: "Credit Period",
+    inputName: supplier.creditPeriod,
+  },
+  {
+    name: "Payment Type",
+    inputName: supplier.payType,
+  },
+  {
+    name: "Bank Code",
+    inputName: supplier.bankCode,
+  },
+  {
+    name: "Branch Code",
+    inputName: supplier.branchCode,
+  },
+  {
+    name: "Account Number",
+    inputName: supplier.accountNo,
+  },
+  {
+    name: "Payee Name",
+    inputName: supplier.payeeName,
+  },
+  {
+    name: "Main Account Code",
+    inputName: supplier.mainCode,
+  },
+  {
+    name: "Sub Account Code",
+    inputName: supplier.subCode,
+  },
+  {
+    name: "Account Code",
+    inputName: supplier.accCode,
+  },
+  {
+    name: "Entry Date",
+    inputName: supplier.entDate,
+  },
+  {
+    name: "Created By (Username)",
+    inputName: supplier.userName,
+  },
+];
 
-    {
-      name: "Address",
-      inputName: supplier.address1,
-    },
-    {
-      name: "Contact No",
-      inputName: supplier.telephone,
-    },
-    {
-      name: "Contact Person",
-      inputName: supplier.contactPerson,
-    },
-    {
-      name: "Email",
-      inputName: supplier.email,
-    },
-    {
-      name: "Fax",
-      inputName: supplier.fax,
-    },
-    {
-      name: "Credit Limit",
-      inputName: supplier.creditLimit,
-    },
-    {
-      name: "Credit Period",
-      inputName: supplier.creditPeriod,
-    },
-    {
-      name: "payType",
-      inputName: supplier.payType,
-    },
-    {
-      name: "bankCode",
-      inputName: supplier.bankCode,
-    },
-    {
-      name: "branchCode",
-      inputName: supplier.branchCode,
-    },
-    {
-      name: "accountNo",
-      inputName: supplier.accountNo,
-    },
-    {
-      name: "payeeName",
-      inputName: supplier.payeeName,
-    },
-    {
-      name: "mainCode",
-      inputName: supplier.mainCode,
-    },
-    {
-      name: "subCode",
-      inputName: supplier.subCode,
-    },
-    {
-      name: "accCode",
-      inputName: supplier.accCode,
-    },
-    {
-      name: "entDate",
-      inputName: supplier.entDate,
-    },
-    {
-      name: "userName",
-      inputName: supplier.userName,
-    },
-  ];
   return (
     <Dialog
       size="xl"

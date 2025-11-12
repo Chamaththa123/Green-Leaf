@@ -47,15 +47,13 @@ export const Login = () => {
           navigate("/");
         })
         .catch(({ response }) => {
-          if (response && response.status === 401) {
-            toast.error(
-              response?.data.error || "Invalid username or password"
-            );
+          if (response && response.status === 404) {
+            toast.error(response?.data.error || "Invalid username or password");
           } else {
-            toast.error(response?.data.error || "An error occurred");
+            toast.error(response?.data.error || "Failed to login");
           }
         });
-    } 
+    }
   };
 
   return (
@@ -89,7 +87,8 @@ export const Login = () => {
             />
             {formErrors.userName && (
               <span className="text-xs font-medium text-red-500 font-poppins">
-                {formErrors.userName} </span>
+                {formErrors.userName}{" "}
+              </span>
             )}
           </div>
 
@@ -115,7 +114,7 @@ export const Login = () => {
               ref={passwordRef}
               className="block rounded-md border-0 py-2 pl-3 text-gray-900 ring-1 ring-inset mt-3 ring-gray-300 placeholder:text-[12px] md:placeholder:text-[14px] placeholder-nunito font-semibold focus:ring-1 focus:ring-inset w-full bg-[#F1F4F9]"
             />
-             {formErrors.password && (
+            {formErrors.password && (
               <span className="text-xs font-medium text-red-500 font-poppins">
                 {formErrors.password}
               </span>

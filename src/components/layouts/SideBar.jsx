@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ListItem, ListItemPrefix } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import logo from "./../../assets/images/logo.png";
+import logo from "./../../assets/images/logo-sidebar.png";
 import logoSmall from "../../assets/images/logo.png";
 import { newNavigationItems } from "../../utils/dataArrays";
 import { CloseSidebarIcon } from "../../utils/icons";
@@ -15,31 +15,15 @@ export const SideBar = ({
   handleLogout,
   toggleSidebarExpand,
   sidebarExpanded,
-  showSalesman,
 }) => {
   const { user } = useStateContext();
 
   const [linkchange, setLinkChange] = useState(false);
-  const [salesmanEnabled, setSalesmanEnabled] = useState(0);
   const [currentUrl, setCurrentUrl] = useState("/dashboard");
 
   const changeUrl = () => {
     setCurrentUrl(window.location.href.split("/").pop());
   };
-
-  useEffect(() => {
-    const getRules = () => {
-      axiosClient
-        .get(`/rules/${user.branch}`)
-        .then((res) => {
-          setSalesmanEnabled(res.data[0].Salesman);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
-    // getRules();
-  }, []);
 
   useEffect(() => {
     changeUrl();
@@ -89,7 +73,7 @@ export const SideBar = ({
             className="absolute top-0 right-0 md:hidden"
           ></span>
           <div
-            className="w-[30px] aspect-square rounded-full bg-[#03d63d] absolute top-28 -right-[15px] z-100 hidden md:flex items-center justify-center pr-[3px] cursor-pointer"
+            className="w-[30px] aspect-square rounded-full bg-[#54993a] absolute top-28 -right-[15px] z-100 hidden md:flex items-center justify-center pr-[3px] cursor-pointer"
             onClick={toggleSidebarExpand}
           >
             {sidebarExpanded ? (
@@ -104,7 +88,7 @@ export const SideBar = ({
           </div>
         </div>
 
-        <div className="w-full relative overflow-y-scroll scrollbar-y-style overflow-x-hidden">
+        <div className="w-full relative overflow-y-scroll scrollbar-y-style overflow-x-hidden mt-5">
           <li className="list-none w-full flex gap-1 flex-col">
             {newNavigationItems.slice(0, 8).map((item, itemIndex) => {
               return (
@@ -241,7 +225,7 @@ const NavItem = ({
   return (
     <div className={`flex w-full ${sidebarExpanded ? `pr-4` : `pr-3`}`}>
       {currentUrl === link ? (
-        <div className="bg-[#03d63d] w-1 h-[45px] min-h-1 rounded-l-lg rounded-r-full"></div>
+        <div className="bg-[#54993a] w-1 h-[45px] min-h-1 rounded-l-lg rounded-r-full"></div>
       ) : (
         <div className="bg-white w-1 h-[45px] min-h-1 rounded-l-lg rounded-r-full"></div>
       )}
@@ -251,7 +235,7 @@ const NavItem = ({
             onClick={handleClick}
             className={`${
               currentUrl === link
-                ? "focus:bg-[#03d63d] active:bg-[#03d63d] bg-[#03d63d] active:text-white focus:text-white text-white font-bold"
+                ? "focus:bg-[#54993a] active:bg-[#54993a] bg-[#54993a] active:text-white focus:text-white text-white font-bold"
                 : "text-[#64728C] font-bold"
             } font-poppins font-bold text-[14px] leading-[22px] justify-between p-0 h-[45px]`}
           >

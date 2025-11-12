@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IconButton, Tooltip } from "@material-tailwind/react";
-import {
-  EditNewIcon,
-  PlusIcon,
-  ViewIcon,
-} from "../../utils/icons";
+import { EditNewIcon, PlusIcon, ViewIcon } from "../../utils/icons";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import DataTable from "react-data-table-component";
@@ -86,8 +82,8 @@ export const Supplier = () => {
   // Creating the table
   const TABLE_SUPPLIER = [
     {
-      name: "Code",
-      selector: (row) => row.supCode,
+      name: "Supplier Code",
+      selector: (row) => row.supCode || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -97,8 +93,8 @@ export const Supplier = () => {
       },
     },
     {
-      name: "Name",
-      selector: (row) => row.supName,
+      name: "Supplier Name",
+      selector: (row) => row.supName || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -108,8 +104,8 @@ export const Supplier = () => {
       },
     },
     {
-      name: "Company",
-      selector: (row) => row.comName,
+      name: "Company Name",
+      selector: (row) => row.comName || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -119,8 +115,8 @@ export const Supplier = () => {
       },
     },
     {
-      name: "Email",
-      selector: (row) => row.email,
+      name: "Email Address",
+      selector: (row) => row.email || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -129,10 +125,9 @@ export const Supplier = () => {
         wordBreak: "break-word",
       },
     },
-
     {
-      name: "Contact No",
-      selector: (row) => row.telephone,
+      name: "Contact Number",
+      selector: (row) => row.telephone || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -143,7 +138,7 @@ export const Supplier = () => {
     },
     {
       name: "Address",
-      selector: (row) => row.address1,
+      selector: (row) => row.address1 || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -154,7 +149,7 @@ export const Supplier = () => {
     },
     {
       name: "Credit Limit",
-      selector: (row) => row.creditLimit,
+      selector: (row) => row.creditLimit || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -165,7 +160,7 @@ export const Supplier = () => {
     },
     {
       name: "Credit Period",
-      selector: (row) => row.creditPeriod,
+      selector: (row) => row.creditPeriod || "-",
       wrap: true,
       compact: true,
       maxWidth: "auto",
@@ -177,22 +172,23 @@ export const Supplier = () => {
     {
       name: "Status",
       selector: (row) => (
-        <>
-        <div className={`w-4 h-4  ${row.inActive? 'bg-red-500': 'bg-green-500'} rounded-full mt-1`}></div>
-        </>
+        <div
+          className={`w-4 h-4 ${
+            row.inActive ? "bg-red-500" : "bg-green-500"
+          } rounded-full mt-1`}
+        ></div>
       ),
       wrap: true,
       compact: true,
       maxWidth: "auto",
-      center:true,
+      center: true,
       cellStyle: {
         whiteSpace: "normal",
         wordBreak: "break-word",
       },
-      
     },
     {
-      name: "Action",
+      name: "Actions",
       cell: (row) => (
         <>
           <Tooltip content="Edit Supplier">
@@ -241,7 +237,7 @@ export const Supplier = () => {
         <div className="w-full bg-white rounded-[15px] px-[30px] pt-[20px] pb-[20px] mt-10 relative">
           <button
             onClick={() => handleAddClick()}
-            className="w-[50px] aspect-square absolute rounded-full bg-[#03d63d] -top-5 -right-3 flex items-center justify-center cursor-pointer"
+            className="w-[50px] aspect-square absolute rounded-full bg-[#54993a] -top-5 -right-3 flex items-center justify-center cursor-pointer"
           >
             <PlusIcon width={"24px"} color={"#FFFFFF"} />
           </button>
@@ -266,10 +262,7 @@ export const Supplier = () => {
       </section>
 
       {addSupplierOpen && (
-        <AddSupplier
-          isOpen={addSupplierOpen}
-          onClose={handleSupplierClose}
-        />
+        <AddSupplier isOpen={addSupplierOpen} onClose={handleSupplierClose} />
       )}
 
       {viewSupplierOpen && (

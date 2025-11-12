@@ -119,7 +119,7 @@ export const MainLayout = ({ selectedItem }) => {
           transition: "margin-left 0.5s ease-in-out",
         }}
       >
-        <div className="relative rounded-none bg-[#03d63d] w-full py-3 md:pl-[2%] pl-[3%] md:pr-[2%] pr-[3%] flex flex-row justify-between items-center md:before:w-[35px] md:before:h-[35px] md:before:content-[''] md:before:bg-[#03d63d] md:before:absolute md:before:left-[-35px] md:before:top-0">
+        <div className="relative rounded-none bg-[#54993a] w-full py-3 md:pl-[2%] pl-[3%] md:pr-[2%] pr-[3%] flex flex-row justify-between items-center md:before:w-[35px] md:before:h-[35px] md:before:content-[''] md:before:bg-[#54993a] md:before:absolute md:before:left-[-35px] md:before:top-0">
           <div>
             <div ref={sideBarButtondownRef} className="flex md:hidden">
               <Tooltip content="Sidebar">

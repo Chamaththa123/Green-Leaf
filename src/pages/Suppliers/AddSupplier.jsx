@@ -100,105 +100,105 @@ export const AddSupplier = ({ isOpen, onClose }) => {
   };
 
   // Array of input items for rendering the form
-  const inputItems = [
-    {
-      name: "Code",
-      inputName: "supCode",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "Name",
-      inputName: "supName",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "Company",
-      inputName: "comName",
-      type: "text",
-      placeholder: "Type here....",
-    },
+const inputItems = [
+  {
+    name: "Supplier Code",
+    inputName: "supCode",
+    type: "text",
+    placeholder: "Enter supplier code...",
+  },
+  {
+    name: "Supplier Name",
+    inputName: "supName",
+    type: "text",
+    placeholder: "Enter supplier name...",
+  },
+  {
+    name: "Company Name",
+    inputName: "comName",
+    type: "text",
+    placeholder: "Enter company name...",
+  },
+  {
+    name: "Address",
+    inputName: "address1",
+    type: "text",
+    placeholder: "Enter address...",
+  },
+  {
+    name: "Contact Person",
+    inputName: "contactPerson",
+    type: "text",
+    placeholder: "Enter contact person name...",
+  },
+  {
+    name: "Email Address",
+    inputName: "email",
+    type: "email",
+    placeholder: "Enter email address...",
+  },
+  {
+    name: "Payment Type",
+    inputName: "payType",
+    type: "text",
+    placeholder: "Enter payment type...",
+  },
+  {
+    name: "Bank Code",
+    inputName: "bankCode",
+    type: "text",
+    placeholder: "Enter bank code...",
+  },
+  {
+    name: "Branch Code",
+    inputName: "branchCode",
+    type: "text",
+    placeholder: "Enter branch code...",
+  },
+  {
+    name: "Account Number",
+    inputName: "accountNo",
+    type: "text",
+    placeholder: "Enter account number...",
+  },
+  {
+    name: "Payee Name",
+    inputName: "payeeName",
+    type: "text",
+    placeholder: "Enter payee name...",
+  },
+  {
+    name: "Main Account Code",
+    inputName: "mainCode",
+    type: "text",
+    placeholder: "Enter main account code...",
+  },
+  {
+    name: "Sub Account Code",
+    inputName: "subCode",
+    type: "text",
+    placeholder: "Enter sub account code...",
+  },
+  {
+    name: "Account Code",
+    inputName: "accCode",
+    type: "text",
+    placeholder: "Enter account code...",
+  },
+  {
+    name: "Entry Date",
+    inputName: "entDate",
+    type: "date",
+    placeholder: "Select entry date...",
+  },
+  {
+    name: "Created By (Username)",
+    inputName: "userName",
+    type: "text",
+    placeholder: "Enter username...",
+  },
+];
 
-    {
-      name: "Address",
-      inputName: "address1",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "Contact Person",
-      inputName: "contactPerson",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "Email",
-      inputName: "email",
-      type: "email",
-      placeholder: "Type here....",
-    },
-    {
-      name: "payType",
-      inputName: "payType",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "bankCode",
-      inputName: "bankCode",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "branchCode",
-      inputName: "branchCode",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "accountNo",
-      inputName: "accountNo",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "payeeName",
-      inputName: "payeeName",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "mainCode",
-      inputName: "mainCode",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "subCode",
-      inputName: "subCode",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "accCode",
-      inputName: "accCode",
-      type: "text",
-      placeholder: "Type here....",
-    },
-    {
-      name: "entDate",
-      inputName: "entDate",
-      type: "date",
-      placeholder: "Type here....",
-    },
-    {
-      name: "userName",
-      inputName: "userName",
-      type: "text",
-      placeholder: "Type here....",
-    },
-  ];
 
   console.log(formData);
   return (
@@ -565,7 +565,7 @@ export const AddSupplier = ({ isOpen, onClose }) => {
 
               <div className="flex justify-end gap-5 md:mt-0 mt-7">
                 <button
-                  className="bg-white font-poppins text-[14px] font-semibold leading-[22px] px-4 py-2 rounded-[20px] min-w-[80px] hover:bg-[#03d63d] hover:text-white text-[#03d63d] border border-[#03d63d] transition-all duration-300 flex items-center gap-2 justify-center"
+                  className="bg-white font-poppins text-[14px] font-semibold leading-[22px] px-4 py-2 rounded-[20px] min-w-[80px] hover:bg-[#54993a] hover:text-white text-[#54993a] border border-[#54993a] transition-all duration-300 flex items-center gap-2 justify-center"
                   type="button"
                   onClick={() => {
                     setFormData(initialFormData);
@@ -574,7 +574,7 @@ export const AddSupplier = ({ isOpen, onClose }) => {
                   Cancel
                 </button>
                 <button
-                  className="bg-[#03d63d] font-poppins text-[14px] font-semibold leading-[22px] px-4 py-2 rounded-[20px] min-w-[80px] hover:bg-[#03d63d] hover:text-white text-white border border-[#03d63d] transition-all duration-300 flex items-center gap-2 justify-center"
+                  className="bg-[#54993a] font-poppins text-[14px] font-semibold leading-[22px] px-4 py-2 rounded-[20px] min-w-[80px] hover:bg-[#54993a] hover:text-white text-white border border-[#54993a] transition-all duration-300 flex items-center gap-2 justify-center"
                   type="submit"
                   disabled={submitting}
                 >
